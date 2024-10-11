@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lalit Kumar goes on safari</title>
+    <!-- Bootstrap CSS for responsive design -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Basic styling for an improved modern look */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9f7ef; /* Soft green background */
+            color: #333; /* Darker text for better contrast */
+            margin: 20px;
+        }
+
+        .header-title {
+            color: #fff;
+            background-color: #28a745; /* Green color for safari theme */
+            padding: 20px;
+            border-radius: 8px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for readability */
+            margin-bottom: 30px;
+        }
+
+        .card {
+            border: 1px solid #28a745; /* Softer border for a cleaner look */
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for modern feel */
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover animation */
+        }
+
+        .card:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+        }
+
+        .info-card {
+            background-color: #f8f9fa; /* Light grey for info cards */
+            text-align: center;
+        }
+
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); /* 6 columns for the game grid */
+            gap: 15px;
+            margin: 30px auto;
+            max-width: 700px; /* Limit the grid width for better layout */
+        }
+
+        .location img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #28a745; /* Green border around images */
+            transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+        }
+
+        .location img:hover {
+            transform: scale(1.05); /* Slightly enlarges image on hover */
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Hover shadow effect */
+        }
+
+        /* Adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .game-grid {
+                grid-template-columns: repeat(3, 1fr); /* 3 columns on smaller screens */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .game-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container mt-4">
+        <!-- Header Section -->
+        <div class="text-center header-title">
+            <h1>Lalit Kumar goes on safari</h1>
+        </div>
+
+        <!-- Information Cards -->
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card info-card p-3 mb-3" onclick="alert('Click on the locations to find rare animals, watch out for the lion!')">
+                    <p><strong>Instructions:</strong> Click on the locations to find rare animals, watch out for the lion!</p>
+                </div>
+                <div class="card info-card p-3 mb-3" id="locations" onclick="alert('Number of locations checked is zero.')">
+                    <p><strong>Number of location checked is zero</strong></p>
+                </div>
+                <div class="card info-card p-3 mb-3" id="score" onclick="alert('Score is zero.')">
+                    <p><strong>Score is zero.</strong></p>
+                </div>
+                <div class="card info-card p-3 mb-3" onclick="alert('Click for help.')">
+                    <p><strong>Click for help</strong></p>
+                </div>
+                <div class="card info-card p-3 mb-3" id="help" onclick="alert('Help report.')">
+                    <p><strong>Help Report</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Field Grid -->
+        <div class="game-grid">
+            <!-- 6x6 grid of tree images -->
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+            <div class="location"><img src="tree.png" alt="Tree"></div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
