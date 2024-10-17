@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lalit Yadav Speed Check</title>
+    <title>Lalit Kumar Speed Check</title>
     <style>
         body {
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(to right, #e0eafc, #cfdef3);
-            color: #333;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
             text-align: center;
             margin: 0;
             display: flex;
@@ -20,9 +21,7 @@
 
         h1 {
             margin-bottom: 20px;
-            font-size: 32px;
-            font-weight: 600;
-            color: #555;
+            font-size: 36px;
         }
 
         .display-container {
@@ -33,59 +32,59 @@
         }
 
         .display-box {
-            font-size: 22px;
+            font-size: 24px;
             padding: 15px;
-            background: rgba(255, 255, 255, 0.2);
-            border: 1px solid #aaa;
-            border-radius: 8px;
-            width: 220px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            color: #333;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #fff;
+            border-radius: 10px;
+            width: 200px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         .button-container {
             display: flex;
-            gap: 12px;
+            gap: 15px;
         }
 
         .button {
-            padding: 12px 25px;
-            font-size: 16px;
+            padding: 12px 30px;
+            font-size: 18px;
             color: #fff;
-            background-color: #5a8a97;
+            background-color: #007bff;
             border: none;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .button:hover {
-            background-color: #446e78;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            background-color: #1156b3;
         }
 
         .progress-bar {
             width: 0;
-            height: 8px;
-            background-color: #8bc6ec;
-            border-radius: 4px;
+            height: 10px;
+            background-color: #bb5722;
+            border-radius: 5px;
             transition: width 1s linear;
             margin-top: 15px;
         }
 
         @media (max-width: 576px) {
             .button {
-                font-size: 14px;
+                font-size: 16px;
                 padding: 10px 20px;
             }
 
             h1 {
-                font-size: 26px;
+                font-size: 28px;
             }
 
             .display-box {
-                font-size: 18px;
+                font-size: 20px;
                 width: 180px;
             }
         }
@@ -93,7 +92,7 @@
 </head>
 <body>
 
-    <h1>Lalit kumar Speed Check</h1>
+    <h1>Lalit Kumar Speed Check</h1>
 
     <div class="display-container">
         <div class="display-box" id="counter">Count</div>
@@ -108,7 +107,7 @@
 
     <script>
         let stopTime = undefined;
-        let countdownDuration = 4; // Duration of countdown in seconds
+        let countdownDuration = Math.floor(Math.random() * 9) + 2; // Random countdown between 2 and 10 seconds
 
         function recordTime() {
             stopTime = Date.now();
@@ -118,6 +117,7 @@
         function startTime() {
             stopTime = undefined;
             document.getElementById("progressBar").style.width = '0';
+            document.getElementById("counter").innerHTML = "Count: " + countdownDuration;
 
             for (let i = 0; i <= countdownDuration; i++) {
                 setTimeout(() => {
