@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lalit Kumar Builds List with Divs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            background-color: red;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .flex-container > div {  /* div children of the flex container */
+            background-color: #f1f1f1; 
+            margin: 10px;  
+            padding: 20px;  
+            font-size: 20px;
+            border-radius: 5px;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 600px) { 
+            .flex-container {
+                flex-direction: column;
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <div class="container text-center mt-4">
+        <h1>Lalit Kumar Builds List with Divs</h1>
+
+        <div class="flex-container" id="target">
+            <div class="divlist">Row item 1</div>   
+            <div class="divlist">Row item 2</div>  
+            <div class="divlist">Row item 3</div>  
+        </div>
+
+        <p>Press the button to create a new element of type div and then add it to the container.</p>
+        
+        <div class="input-group mb-3">
+            <input type="text" id="inputValue" class="form-control" placeholder="Enter text for new div">
+            <div class="input-group-append">
+                <button class="btn btn-primary" onclick="makeNewDiv()">Add End</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function makeNewDiv() {
+            // Get the value from the input element
+            const inputValue = document.getElementById('inputValue').value;
+
+            // Create the new div and set its text
+            let element = document.createElement("div");
+            element.innerHTML = inputValue; // Set innerHTML to the input value
+            element.className = "divlist";  // Set className to "divlist"
+
+            // Append the new div to the container
+            let container = document.getElementById('target');
+            container.appendChild(element);
+            
+            // Clear the input field after adding the div
+            document.getElementById('inputValue').value = '';
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
